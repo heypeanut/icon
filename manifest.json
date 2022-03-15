@@ -1,6 +1,6 @@
 {
-  "name": "Getting Started Example",
-  "description": "Build an Extension!",
+  "name": "fashionnova icon",
+  "description": "Build an fashionnova!",
   "version": "1.0",
   "manifest_version": 3,
   "background": {
@@ -16,11 +16,17 @@
       "128": "/images/get_started128.png"
     }
   },
+  "content_scripts": [
+    {
+      "matches": ["https://*.fashionnova.com/*"],
+      "css": ["contentCss/index.css"],
+      "run_at": "document_idle"
+    }
+  ],
   "icons": {
     "16": "/images/get_started16.png",
     "32": "/images/get_started32.png",
     "48": "/images/get_started48.png",
     "128": "/images/get_started128.png"
-  },
-  "options_page": "options.html"
+  }
 }
